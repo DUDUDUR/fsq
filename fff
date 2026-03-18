@@ -1,5 +1,5 @@
 -- Countdown 3 detik
-for i = 4,1,-1 do
+for i = 3,1,-1 do
     print("Starting in "..i.."...")
     task.wait(1)
 end
