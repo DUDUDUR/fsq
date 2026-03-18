@@ -1,0 +1,13 @@
+task.spawn(function()
+    while true do
+        for i = 1,9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 do
+            local part = Instance.new("Part")
+            part.Size = Vector3.new(4,4,4)
+            part.Position = Vector3.new(0,20,0)
+            part.Anchored = false
+            part.Parent = workspace
+        end
+        
+        task.wait(0) -- ulang setiap 1 detik
+    end
+end)
