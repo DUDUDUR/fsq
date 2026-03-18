@@ -1,13 +1,20 @@
+-- Countdown 3 detik
+for i = 4,1,-1 do
+    print("Starting in "..i.."...")
+    task.wait(1)
+end
+print("Go!")
+
+-- Spawn 100 part per detik
 task.spawn(function()
     while true do
-        for i = 1,9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 do
+        for i = 1,99999999999999999999999999999999999999999999999999999999999999999 do
             local part = Instance.new("Part")
             part.Size = Vector3.new(4,4,4)
-            part.Position = Vector3.new(0,20,0)
+            part.Position = Vector3.new(math.random(-50,50),20,math.random(-50,50)) -- posisi random
             part.Anchored = false
             part.Parent = workspace
         end
-        
-        task.wait(0) -- ulang setiap 1 detik
+        task.wait(0)
     end
 end)
